@@ -22,6 +22,8 @@ public class ErrorModel : PageModel
     public void OnGet()
     {
         RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
+        _logger.Log(LogLevel.Error, "This is a sample generated error log.");
+        _logger.LogTrace("This is a sample trace logged by an error page.");
     }
 }
 

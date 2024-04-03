@@ -17,6 +17,8 @@ public class IndexModel : PageModel
     }
 
     public void OnGet()
-    {        
+    {
+        _logger.LogDebug("This is a sample debug log from the index page.");
+        _logger.LogInformation("This is a sample info log from the index page.");
     }
 }
