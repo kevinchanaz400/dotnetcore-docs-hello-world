@@ -21,9 +21,4 @@ public class IndexModel : PageModel
         _logger.LogDebug("This is a sample debug log from the index page.");
         _logger.LogInformation("This is a sample info log from the index page.");
     }
-    
-    public IActionResult OnGet(int id)
-    {
-        return NotFound();
-    }
 }
