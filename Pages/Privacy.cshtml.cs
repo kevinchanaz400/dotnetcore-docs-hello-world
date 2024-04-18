@@ -12,7 +12,7 @@ public class PrivacyModel : PageModel
         _logger = logger;
     }
 
-    public void OnGet()
+    public IActionResult OnGet()
     {
         _logger.LogWarning("This is a sample warning log from the privacy page.");
 
