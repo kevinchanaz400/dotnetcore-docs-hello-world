@@ -19,11 +19,13 @@ public class ErrorModel : PageModel
         _logger = logger;
     }
 
-    public void OnGet()
+    public IActionResult OnGet()
     {
         RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier;
         _logger.Log(LogLevel.Error, "This is a sample generated error log.");
         _logger.LogTrace("This is a sample trace logged by an error page.");
+
+        return new UnauthorizedResult();
     }
 }
 
